@@ -128,24 +128,24 @@ export default function Hero() {
 
                 {/* Silhouette placeholder */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Image
+                  {/* <Image
                     src="/images/Emmanuel-amela.jpeg"
                     alt="Hero Avatar"
                     width={480}
                     height={480}
                     className="w-48 h-48 opacity-20"
-                  />
-                  {/* <svg
+                  /> */}
+                  <svg
                     viewBox="0 0 200 200"
                     className="w-48 h-48 opacity-20"
                     fill="none"
                     aria-hidden="true"
-                  > */}
-                  {/* Head */}
-                  {/* <circle cx="100" cy="65" r="35" fill="#5B21B6" /> */}
-                  {/* Body */}
-                  {/* <ellipse cx="100" cy="160" rx="55" ry="45" fill="#5B21B6" /> */}
-                  {/* </svg> */}
+                  >
+                    {/* Head */}
+                    <circle cx="100" cy="65" r="35" fill="#5B21B6" />
+                    {/* Body */}
+                    <ellipse cx="100" cy="160" rx="55" ry="45" fill="#5B21B6" />
+                  </svg>
                 </div>
 
                 {/* Animated scan bar */}
