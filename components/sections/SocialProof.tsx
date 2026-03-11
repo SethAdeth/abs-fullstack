@@ -3,12 +3,12 @@
 import { cn } from "@/lib/utils";
 
 const PARTNERS = [
-  "Partenaire 1",
-  "Partenaire 2",
-  "Partenaire 3",
-  "Partenaire 4",
-  "Partenaire 5",
-  "Partenaire 6",
+  { name: "ElevenLabs", initials: "XI" },
+  { name: "HeyGen", initials: "HG" },
+  { name: "OpenAI", initials: "AI" },
+  { name: "Midjourney", initials: "MJ" },
+  { name: "Runway", initials: "RW" },
+  { name: "Synthesia", initials: "SY" },
 ];
 
 export default function SocialProof() {
@@ -16,7 +16,7 @@ export default function SocialProof() {
     <section className="relative bg-[#F5F3FF] py-12 md:py-16 border-t border-b border-[#5B21B6]/10">
       {/* Label */}
       <p className="text-center text-xs md:text-sm uppercase tracking-[0.2em] text-[#6B7280]/60 font-medium mb-8">
-        Ils nous font confiance
+        Technologies &amp; Partenaires de confiance
       </p>
 
       {/* Scrolling band */}
@@ -31,43 +31,49 @@ export default function SocialProof() {
           style={{ animationDuration: "30s" }}
         >
           {/* Original set */}
-          {PARTNERS.map((name, index) => (
+          {PARTNERS.map((partner, index) => (
             <div
               key={`partner-a-${index}`}
               className={cn(
-                "flex items-center justify-center mx-6 md:mx-10 flex-shrink-0",
-                "px-6 py-3 rounded-lg border border-[#5B21B6]/10 bg-[#FFFFFF]/50",
+                "flex items-center gap-3 mx-6 md:mx-10 flex-shrink-0",
+                "px-6 py-3 rounded-lg border border-[#5B21B6]/10 bg-[#FFFFFF]/70",
                 "hover:border-[#5B21B6]/30 transition-all duration-300"
               )}
             >
+              <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-[#5B21B6]/10 text-[#5B21B6] text-xs font-bold">
+                {partner.initials}
+              </span>
               <span
-                className="text-sm md:text-base font-medium text-[#6B7280]/40 tracking-wide whitespace-nowrap"
+                className="text-sm md:text-base font-semibold text-[#1F2937]/70 tracking-wide whitespace-nowrap"
                 style={{
                   fontFamily: "var(--font-sub), system-ui, sans-serif",
                 }}
               >
-                {name}
+                {partner.name}
               </span>
             </div>
           ))}
 
           {/* Duplicated set for seamless loop */}
-          {PARTNERS.map((name, index) => (
+          {PARTNERS.map((partner, index) => (
             <div
               key={`partner-b-${index}`}
               className={cn(
-                "flex items-center justify-center mx-6 md:mx-10 flex-shrink-0",
-                "px-6 py-3 rounded-lg border border-[#5B21B6]/10 bg-[#FFFFFF]/50",
+                "flex items-center gap-3 mx-6 md:mx-10 flex-shrink-0",
+                "px-6 py-3 rounded-lg border border-[#5B21B6]/10 bg-[#FFFFFF]/70",
                 "hover:border-[#5B21B6]/30 transition-all duration-300"
               )}
             >
+              <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-[#5B21B6]/10 text-[#5B21B6] text-xs font-bold">
+                {partner.initials}
+              </span>
               <span
-                className="text-sm md:text-base font-medium text-[#6B7280]/40 tracking-wide whitespace-nowrap"
+                className="text-sm md:text-base font-semibold text-[#1F2937]/70 tracking-wide whitespace-nowrap"
                 style={{
                   fontFamily: "var(--font-sub), system-ui, sans-serif",
                 }}
               >
-                {name}
+                {partner.name}
               </span>
             </div>
           ))}

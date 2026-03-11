@@ -126,26 +126,16 @@ export default function Hero() {
                   aria-hidden="true"
                 />
 
-                {/* Silhouette placeholder */}
+                {/* Avatar image */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  {/* <Image
-                    src="/images/Emmanuel-amela.jpeg"
-                    alt="Hero Avatar"
+                  <Image
+                    src="/avatar.png"
+                    alt="Avatar IA — ABS Corporation"
                     width={480}
                     height={480}
-                    className="w-48 h-48 opacity-20"
-                  /> */}
-                  <svg
-                    viewBox="0 0 200 200"
-                    className="w-48 h-48 opacity-20"
-                    fill="none"
-                    aria-hidden="true"
-                  >
-                    {/* Head */}
-                    <circle cx="100" cy="65" r="35" fill="#5B21B6" />
-                    {/* Body */}
-                    <ellipse cx="100" cy="160" rx="55" ry="45" fill="#5B21B6" />
-                  </svg>
+                    className="w-full h-full object-cover"
+                    priority
+                  />
                 </div>
 
                 {/* Animated scan bar */}
@@ -235,3 +225,5 @@ export default function Hero() {
     </section>
   );
 }
+
+

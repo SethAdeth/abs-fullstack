@@ -8,8 +8,8 @@ import { SITE_CONFIG } from "@/lib/constants";
 export default function WhatsAppButton() {
   const pathname = usePathname();
 
-  // Hide on /contact page
-  if (pathname === "/contact") {
+  // Hide on /contact and /admin pages
+  if (pathname === "/contact" || pathname.startsWith("/admin")) {
     return null;
   }
 

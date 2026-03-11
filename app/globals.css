@@ -6,7 +6,7 @@
    Light Theme — Dark Violet Primary
    ═══════════════════════════════════════════════════════════════ */
 
-@theme inline {
+@theme {
   /* ── Color Palette ── */
   --color-blanc: #FFFFFF;
   --color-blanc-alt: #F5F3FF;

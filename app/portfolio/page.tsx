@@ -117,7 +117,7 @@ function CaseStudyCardCustom({
         {/* Challenge */}
         <div className="mb-5">
           <p className="text-xs uppercase tracking-wider text-[#5B21B6] font-semibold mb-1">
-            Le Defi
+            Le Défi
           </p>
           <p className="text-sm text-[#6B7280] leading-relaxed line-clamp-2">
             {study.challenge}
@@ -161,7 +161,7 @@ function CaseStudyCardCustom({
           href={`/portfolio/${study.id}`}
           className="inline-flex items-center gap-2 text-sm font-medium text-[#5B21B6] hover:text-[#7C3AED] transition-colors duration-300 group/link mt-auto"
         >
-          Lire l&apos;etude complete
+          Lire l&apos;étude complète
           <ArrowRight
             size={16}
             className="transition-transform duration-300 group-hover/link:translate-x-1"
@@ -242,7 +242,7 @@ export default function PortfolioPage() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5B21B6]/10 border border-[#5B21B6]/30 text-[#5B21B6] text-sm font-medium mb-6"
             >
               <Sparkles size={16} />
-              Etudes de Cas
+              Études de cas
             </motion.div>
 
             {/* H1 */}
@@ -253,7 +253,7 @@ export default function PortfolioPage() {
               className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-[1.1] text-[#1F2937]"
               style={{ fontFamily: "var(--font-heading), Georgia, serif" }}
             >
-              Nos Resultats Parlent{" "}
+              Nos Résultats Parlent{" "}
               <span className="text-gradient-gold">d&apos;Eux-Memes</span>
             </motion.h1>
 
@@ -264,7 +264,7 @@ export default function PortfolioPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg md:text-xl text-[#6B7280] leading-relaxed max-w-3xl"
             >
-              Decouvrez comment nous avons transforme la presence numerique de
+              Découvrez comment nous avons transformé la présence numérique de
               leaders africains.
             </motion.p>
           </div>
@@ -277,9 +277,9 @@ export default function PortfolioPage() {
             className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-10 border-t border-[#5B21B6]/10"
           >
             {[
-              { value: "50+", label: "Projets realises" },
+              { value: "50+", label: "Projets réalisés" },
               { value: "+340%", label: "Engagement moyen" },
-              { value: "15+", label: "Pays touches" },
+              { value: "15+", label: "Pays touchés" },
               { value: "100%", label: "Clients satisfaits" },
             ].map((stat, i) => (
               <div key={i} className="text-center">
@@ -344,7 +344,7 @@ export default function PortfolioPage() {
             <span className="text-[#5B21B6] font-semibold">
               {filteredStudies.length}
             </span>{" "}
-            {filteredStudies.length === 1 ? "etude trouvee" : "etudes trouvees"}
+            {filteredStudies.length === 1 ? "étude trouvée" : "études trouvées"}
           </div>
 
           <AnimatePresence mode="wait">
@@ -381,10 +381,10 @@ export default function PortfolioPage() {
                     fontFamily: "var(--font-sub), system-ui, sans-serif",
                   }}
                 >
-                  Aucune etude de cas trouvee
+                  Aucune étude de cas trouvée
                 </h3>
                 <p className="text-[#6B7280] text-sm mb-6">
-                  Essayez de modifier vos filtres pour voir plus de resultats.
+                  Essayez de modifier vos filtres pour voir plus de résultats.
                 </p>
                 <button
                   onClick={() => {
@@ -393,7 +393,7 @@ export default function PortfolioPage() {
                   }}
                   className="text-[#5B21B6] text-sm font-medium hover:text-[#7C3AED] transition-colors cursor-pointer"
                 >
-                  Reinitialiser les filtres
+                  Réinitialiser les filtres
                 </button>
               </motion.div>
             )}
@@ -406,7 +406,7 @@ export default function PortfolioPage() {
         <div className="container-abs">
           <SectionTitle
             title="Galerie d'Avatars"
-            subtitle="Decouvrez la diversite et le realisme de nos avatars IA professionnels, concus pour refleter l'identite unique de chaque leader."
+            subtitle="Découvrez la diversité et le réalisme de nos avatars IA professionnels, conçus pour refléter l'identité unique de chaque leader."
           />
 
           <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4">
@@ -490,18 +490,18 @@ export default function PortfolioPage() {
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
               style={{ fontFamily: "var(--font-heading), Georgia, serif" }}
             >
-              Obtenir des resultats similaires
+              Obtenir des résultats similaires
             </h2>
             <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto">
-              Rejoignez les leaders africains qui ont deja transforme leur
-              presence numerique avec ABS Corporation.
+              Rejoignez les leaders africains qui ont déjà transformé leur
+              présence numérique avec ABS Corporation.
             </p>
             <Button
               href="/contact"
-              className="bg-white text-[#5B21B6] hover:bg-[#F5F3FF] border-none"
+              variant="white"
               size="lg"
             >
-              Demander un devis
+              Demander un Devis
               <ArrowRight size={18} />
             </Button>
           </motion.div>

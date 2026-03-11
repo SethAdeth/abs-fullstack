@@ -41,7 +41,7 @@ const iconMap: Record<string, React.ElementType> = {
 const FORMATS = [
   {
     icon: Building,
-    title: "Presentiel",
+    title: "Présentiel",
     description: "Formation en salle avec nos experts",
   },
   {
@@ -51,60 +51,60 @@ const FORMATS = [
   },
   {
     icon: Laptop,
-    title: "Hybrid",
-    description: "Combinaison presentiel et distanciel",
+    title: "Hybride",
+    description: "Combinaison présentiel et distanciel",
   },
   {
     icon: Settings,
     title: "Sur-mesure",
-    description: "Programme adapte a votre entreprise",
+    description: "Programme adapté à votre entreprise",
   },
 ];
 
 const CERTIFICATIONS = [
   {
     icon: Star,
-    title: "Certifie Prompt Engineer ABS",
+    title: "Certifié Prompt Engineer ABS",
     level: "Niveau 1",
     description:
-      "Maitrisez les fondamentaux et techniques avancees du Prompt Engineering pour la creation de contenu IA.",
+      "Maîtrisez les fondamentaux et techniques avancées du Prompt Engineering pour la création de contenu IA.",
   },
   {
     icon: Award,
-    title: "Certifie Branding IA ABS",
+    title: "Certifié Branding IA ABS",
     level: "Niveau 2",
     description:
-      "Expertise en construction de marque personnelle augmentee par l'intelligence artificielle.",
+      "Expertise en construction de marque personnelle augmentée par l'intelligence artificielle.",
   },
   {
     icon: Crown,
     title: "Expert Digital Human ABS",
     level: "Niveau 3",
     description:
-      "Certification complete couvrant l'ensemble de l'ecosysteme Digital Human Branding.",
+      "Certification complète couvrant l'ensemble de l'écosystème Digital Human Branding.",
   },
 ];
 
 const TESTIMONIALS = [
   {
     quote:
-      "La formation en Prompt Engineering d'ABS Academie a completement transforme ma facon de travailler. Je produis maintenant du contenu 10x plus vite avec une qualite superieure.",
+      "La formation en Prompt Engineering d'ABS Académie a complètement transformé ma façon de travailler. Je produis maintenant du contenu 10x plus vite avec une qualité supérieure.",
     author: "Amadou Diallo",
     role: "Directeur Marketing, Dakar",
     rating: 5,
   },
   {
     quote:
-      "Grace a la certification Branding IA, j'ai pu repositionner ma marque personnelle et tripler mon audience en 3 mois. Un investissement inestimable.",
+      "Grâce à la certification Branding IA, j'ai pu repositionner ma marque personnelle et tripler mon audience en 3 mois. Un investissement inestimable.",
     author: "Fatima Ouedraogo",
     role: "Coach Business, Ouagadougou",
     rating: 5,
   },
   {
     quote:
-      "L'equipe pedagogique est exceptionnelle. Chaque module est concret, actionnable et directement applicable a mon business. Je recommande a 100%.",
+      "L'équipe pédagogique est exceptionnelle. Chaque module est concret, actionnable et directement applicable à mon business. Je recommande à 100%.",
     author: "Jean-Paul Mensah",
-    role: "CEO Tech, Lome",
+    role: "CEO Tech, Lomé",
     rating: 5,
   },
 ];
@@ -232,7 +232,7 @@ export default function AcademiePage() {
               Accueil
             </Link>
             <span className="text-[#5B21B6]">/</span>
-            <span className="text-[#5B21B6]">ABS Academie</span>
+            <span className="text-[#5B21B6]">ABS Académie</span>
           </nav>
 
           <div className="max-w-4xl">
@@ -256,7 +256,7 @@ export default function AcademiePage() {
               style={{ fontFamily: "var(--font-heading), Georgia, serif" }}
             >
               Devenez{" "}
-              <span className="text-gradient-gold">Maitre de l&apos;IA</span>{" "}
+              <span className="text-gradient-gold">Maître de l&apos;IA</span>{" "}
               pour votre Business
             </motion.h1>
 
@@ -267,7 +267,7 @@ export default function AcademiePage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg md:text-xl text-[#6B7280] leading-relaxed max-w-3xl mb-10"
             >
-              ABS Academie — La plateforme de formation de reference en Prompt
+              ABS Académie — La plateforme de formation de référence en Prompt
               Engineering et IA Branding en Afrique francophone.
             </motion.p>
 
@@ -296,7 +296,7 @@ export default function AcademiePage() {
             className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-10 border-t border-[#5B21B6]/10"
           >
             {[
-              { value: "500+", label: "Apprenants formes" },
+              { value: "500+", label: "Apprenants formés" },
               { value: "4", label: "Programmes certifiants" },
               { value: "98%", label: "Taux de satisfaction" },
               { value: "3", label: "Niveaux de certification" },
@@ -317,7 +317,7 @@ export default function AcademiePage() {
         <div className="container-abs">
           <SectionTitle
             title="Nos Programmes de Formation"
-            subtitle="Des formations certifiantes concues pour transformer votre approche du branding et de la creation de contenu grace a l'IA."
+            subtitle="Des formations certifiantes conçues pour transformer votre approche du branding et de la création de contenu grâce à l'IA."
           />
 
           <div className="grid lg:grid-cols-2 gap-8">
@@ -333,7 +333,7 @@ export default function AcademiePage() {
         <div className="container-abs">
           <SectionTitle
             title="Formats de Formation"
-            subtitle="Choisissez le format qui s'adapte le mieux a votre emploi du temps et a vos objectifs."
+            subtitle="Choisissez le format qui s'adapte le mieux à votre emploi du temps et à vos objectifs."
           />
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -379,7 +379,7 @@ export default function AcademiePage() {
         <div className="container-abs">
           <SectionTitle
             title="Certifications ABS Corporation"
-            subtitle="Validez vos competences avec nos certifications reconnues dans l'ecosysteme IA et branding."
+            subtitle="Validez vos compétences avec nos certifications reconnues dans l'écosystème IA et branding."
           />
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -436,8 +436,8 @@ export default function AcademiePage() {
       <section className="section-padding bg-white">
         <div className="container-abs">
           <SectionTitle
-            title="Temoignages d'Apprenants"
-            subtitle="Decouvrez ce que nos apprenants disent de leur experience avec ABS Academie."
+            title="Témoignages d'Apprenants"
+            subtitle="Découvrez ce que nos apprenants disent de leur expérience avec ABS Académie."
           />
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -515,18 +515,18 @@ export default function AcademiePage() {
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
               style={{ fontFamily: "var(--font-heading), Georgia, serif" }}
             >
-              Pret a maitriser l&apos;IA ?
+              Prêt à maîtriser l&apos;IA ?
             </h2>
             <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto">
-              Rejoignez la prochaine session de formation ABS Academie et
+              Rejoignez la prochaine session de formation ABS Académie et
               transformez votre approche du business digital.
             </p>
             <Button
               href="/contact"
-              className="bg-white text-[#5B21B6] hover:bg-[#F5F3FF] border-none"
+              variant="white"
               size="lg"
             >
-              Reserver ma place
+              Réserver ma place
               <ArrowRight size={18} />
             </Button>
           </motion.div>

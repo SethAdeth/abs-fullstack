@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-type ButtonVariant = "primary" | "secondary" | "ghost";
+type ButtonVariant = "primary" | "secondary" | "outline-light" | "white" | "ghost";
 type ButtonSize = "sm" | "md" | "lg";
 
 interface ButtonBaseProps {
@@ -37,6 +37,16 @@ const variantStyles: Record<ButtonVariant, string> = {
     "border-2 border-[#5B21B6] text-[#5B21B6] bg-transparent rounded",
     "hover:bg-[#5B21B6] hover:text-white",
     "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7C3AED] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+  ),
+  "outline-light": cn(
+    "border-2 border-white/80 text-white bg-transparent rounded",
+    "hover:bg-white hover:text-[#5B21B6]",
+    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#5B21B6]"
+  ),
+  white: cn(
+    "bg-white text-[#5B21B6] font-semibold rounded shadow-lg",
+    "hover:bg-[#F5F3FF] hover:shadow-xl",
+    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#5B21B6]"
   ),
   ghost: cn(
     "text-[#1F2937] bg-transparent underline-offset-4 hover:underline",

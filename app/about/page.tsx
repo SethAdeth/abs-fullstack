@@ -433,7 +433,7 @@ export default function AboutPage() {
 
         <div className="container-abs relative z-10">
           <SectionTitle
-            title="Chiffres Cl\u00e9s"
+            title="Chiffres clés"
             subtitle="L&apos;impact mesurable de notre mission."
           />
 
@@ -453,7 +453,7 @@ export default function AboutPage() {
         </div>
         <div className="container-abs relative z-10 text-center">
           <h2
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-gradient-gold mb-6"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
             style={{ fontFamily: "var(--font-heading), Georgia, serif" }}
           >
             Rejoignez l&apos;Aventure
@@ -463,11 +463,11 @@ export default function AboutPage() {
             num&eacute;rique immortel ? Parlons de votre projet.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button href="/contact" size="lg" className="bg-white text-[#5B21B6] hover:bg-[#F5F3FF]">
+            <Button href="/contact" variant="white" size="lg">
               Nous Contacter
               <ArrowRight size={18} />
             </Button>
-            <Button href="/services" variant="secondary" size="lg" className="border-white text-white hover:bg-white hover:text-[#5B21B6]">
+            <Button href="/services" variant="outline-light" size="lg">
               D&eacute;couvrir Nos Services
             </Button>
           </div>

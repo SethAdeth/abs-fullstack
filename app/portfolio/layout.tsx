@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Portfolio",
   description:
-    "Etudes de cas et resultats clients. Decouvrez comment ABS Corporation transforme la presence numerique des leaders africains.",
+    "Études de cas et résultats clients. Découvrez comment ABS Corporation transforme la présence numérique des leaders africains.",
 };
 
 export default function PortfolioLayout({

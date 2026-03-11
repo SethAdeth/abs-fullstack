@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Linkedin, Twitter, Instagram, Youtube } from "lucide-react";
 import { NAV_LINKS, SITE_CONFIG, SERVICES } from "@/lib/constants";
 
@@ -23,6 +26,11 @@ const SOCIAL_LINKS = [
 ];
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  // Hide footer on admin pages
+  if (pathname.startsWith("/admin")) return null;
+
   return (
     <footer className="bg-[#4C1D95] text-white">
       {/* Main Footer */}
@@ -145,9 +153,17 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container-abs py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-white/40 text-xs text-center md:text-left">
-              &copy; 2025 {SITE_CONFIG.name} &mdash; {SITE_CONFIG.fullName}
-            </p>
+            <div className="flex items-center gap-4 text-center md:text-left">
+              <p className="text-white/40 text-xs">
+                &copy; 2025 {SITE_CONFIG.name} &mdash; {SITE_CONFIG.fullName}
+              </p>
+              <Link
+                href="/admin"
+                className="text-white/20 hover:text-white/60 text-xs transition-colors duration-300"
+              >
+                Admin
+              </Link>
+            </div>
             <div className="flex flex-wrap items-center justify-center gap-4">
               {LEGAL_LINKS.map((link) => (
                 <Link

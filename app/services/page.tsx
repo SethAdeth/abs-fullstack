@@ -362,7 +362,7 @@ export default function ServicesPage() {
       <section className="bg-[#F5F3FF] section-padding">
         <div className="container-abs max-w-3xl">
           <SectionTitle
-            title="Questions Frequentes"
+            title="Questions Fréquentes"
             subtitle="Tout ce que vous devez savoir sur nos services de Digital Human Branding."
           />
           <ServicesFAQ items={SERVICE_FAQ} />
@@ -376,7 +376,7 @@ export default function ServicesPage() {
         </div>
         <div className="container-abs relative z-10 text-center">
           <h2
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-gradient-gold mb-6"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
             style={{ fontFamily: "var(--font-heading), Georgia, serif" }}
           >
             Pr&ecirc;t &agrave; Transformer Votre Pr&eacute;sence ?
@@ -386,11 +386,11 @@ export default function ServicesPage() {
             choix de l&apos;immortalit&eacute; num&eacute;rique.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button href="/contact" size="lg" className="bg-white text-[#5B21B6] hover:bg-[#F5F3FF]">
+            <Button href="/contact" variant="white" size="lg">
               D&eacute;marrer Mon Projet
               <ArrowRight size={18} />
             </Button>
-            <Button href="/tarifs" variant="secondary" size="lg" className="border-white text-white hover:bg-white hover:text-[#5B21B6]">
+            <Button href="/tarifs" variant="outline-light" size="lg">
               Voir les Tarifs
             </Button>
           </div>

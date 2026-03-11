@@ -2,11 +2,13 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 export default function CTAFloating() {
   const [isVisible, setIsVisible] = useState(false);
+  const pathname = usePathname();
 
   const handleScroll = useCallback(() => {
     setIsVisible(window.scrollY > 500);
@@ -17,6 +19,9 @@ export default function CTAFloating() {
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
+
+  // Hide on admin pages (after all hooks)
+  if (pathname.startsWith("/admin")) return null;
 
   return (
     <AnimatePresence>

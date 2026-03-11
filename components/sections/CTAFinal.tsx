@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, ArrowRight } from "lucide-react";
 import Button from "@/components/ui/Button";
 import { SITE_CONFIG } from "@/lib/constants";
 
@@ -79,10 +79,11 @@ export default function CTAFinal() {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button href="/contact" size="lg" className="bg-white text-[#5B21B6] hover:bg-[#5B21B6]/80 hover:text-white ">
+            <Button href="/contact" variant="white" size="lg">
               Réserver mon Diagnostic d&apos;Autorité
+              <ArrowRight size={18} />
             </Button>
-            <Button href={whatsappUrl} variant="secondary" size="lg" className="border-white text-white hover:bg-white hover:border-[#5B21B6] hover:text-[#5B21B6]">
+            <Button href={whatsappUrl} variant="outline-light" size="lg">
               <MessageCircle size={18} />
               Contacter via WhatsApp
             </Button>

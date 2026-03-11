@@ -13,6 +13,9 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
 
+  // Hide navbar on admin pages
+  const isAdmin = pathname.startsWith("/admin");
+
   const handleScroll = useCallback(() => {
     setIsScrolled(window.scrollY > 20);
   }, []);
@@ -39,6 +42,8 @@ export default function Navbar() {
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [pathname]);
+
+  if (isAdmin) return null;
 
   return (
     <header
