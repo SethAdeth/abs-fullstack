@@ -88,13 +88,13 @@ export const SERVICES = [
 ];
 
 export const WORKFLOW_STEPS = [
-  { step: 1, title: "Captation", description: "2 min de vidéo 4K + 5 min d'audio de qualité studio" },
-  { step: 2, title: "Entraînement IA", description: "Création de votre modèle vocal et facial sécurisé dans l'Identité Vault" },
-  { step: 3, title: "Scripting & Prompting", description: "Rédaction de scripts par notre équipe Storyteller" },
-  { step: 4, title: "Génération", description: "Production de la vidéo via nos API propriétaires" },
-  { step: 5, title: "Polissage", description: "Montage premium, sous-titres, étalonnage couleurs" },
-  { step: 6, title: "Contrôle Qualité", description: "Vérification éthique + watermarking « Verified by ABS Corp »" },
-  { step: 7, title: "Livraison", description: "Via canal sécurisé ou automatisation directe sur vos réseaux sociaux" },
+  { step: 1, title: "Extraction ADN Oratoire", description: "Séance d'immersion totale : 6 min de données visuelles 4K pour la cartographie faciale + 2h de captation audio HD. Chaque nuance et intonation encodée." },
+  { step: 2, title: "Forge Identitaire", description: "Entraînement de vos réseaux neuronaux dédiés. Votre jumeau est forgé et crypté au sein de l'Identity Vault™, exclusivité et sécurité totales." },
+  { step: 3, title: "Ingénierie Narrative", description: "Nos architectes de contenu conçoivent vos scripts d'autorité, alignant vision stratégique et algorithmes de rétention performants." },
+  { step: 4, title: "Matérialisation", description: "Activation de votre double via nos infrastructures propriétaires. Votre message prend vie avec fluidité organique et puissance inégalée." },
+  { step: 5, title: "Raffinement", description: "Étalonnage chromatique cinématographique, typographies premium et synchronisation labiale parfaite." },
+  { step: 6, title: "Certification Éthique", description: "Contrôle de conformité rigoureux et application du watermark « Verified by ABS Corp™ », attestant l'authenticité institutionnelle." },
+  { step: 7, title: "Déploiement", description: "Livraison via canal crypté ou injection directe dans votre écosystème de diffusion pour une omniprésence immédiate." },
 ];
 
 export const TEAM_MEMBERS = [
@@ -102,19 +102,19 @@ export const TEAM_MEMBERS = [
     name: "Raphael Sossoe",
     role: "CEO & Fondateur",
     bio: "Visionnaire du Digital Human Branding en Afrique, Raphael a fondé ABS Corporation avec la conviction que chaque leader mérite une présence numérique immortelle.",
-    avatar: "/team/ceo.jpg",
+    avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
   },
   {
     name: "Aimé Kook",
     role: "Chief AI Officer",
     bio: "Expert en intelligence artificielle et en technologies de synthèse vocale et vidéo, Aimé dirige l'innovation technologique d'ABS Corporation.",
-    avatar: "/team/caio.jpg",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
   },
   {
     name: "L'Équipe Forge",
     role: "Prompt Engineers & Creative Technologists",
     bio: "Notre équipe multidisciplinaire combine expertise en IA, production vidéo et storytelling pour créer des avatars qui captent l'essence de chaque leader.",
-    avatar: "/team/forge.jpg",
+    avatar: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=400&fit=crop&crop=faces",
   },
 ];
 
@@ -157,7 +157,7 @@ export const PRICING_PLANS = {
       id: "bronze",
       name: "BRONZE",
       subtitle: "Visibilité",
-      price: 300000,
+      price: 200000,
       currency: "FCFA/mois",
       features: {
         videos: "8 vidéos (2/semaine)",
@@ -228,7 +228,7 @@ export const CASE_STUDIES = [
     solution: "Création d'un avatar IA complet avec stratégie de diffusion multilingue sur LinkedIn, YouTube et Instagram.",
     results: { engagement: "+340%", leads: "+150 contacts qualifiés/mois", time: "20h économisées/semaine" },
     testimonial: "ABS Corporation a transformé ma présence en ligne. Mon avatar produit du contenu dans 3 langues pendant que je me concentre sur la croissance de mon entreprise.",
-    image: "/portfolio/case-1.jpg",
+    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop",
   },
   {
     id: "2",
@@ -240,7 +240,7 @@ export const CASE_STUDIES = [
     solution: "Déploiement de l'Avatar System™ avec clonage vocal pour la production automatisée de modules de formation.",
     results: { engagement: "+200%", leads: "+80 inscriptions/mois", time: "15h économisées/semaine" },
     testimonial: "Mon avatar forme mes clients pendant que je dors. C'est la définition même de l'ubiquité numérique.",
-    image: "/portfolio/case-2.jpg",
+    image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&h=600&fit=crop",
   },
   {
     id: "3",
@@ -252,7 +252,7 @@ export const CASE_STUDIES = [
     solution: "Refonte complète de l'identité numérique avec avatars IA pour les communications officielles multilingues.",
     results: { engagement: "+500%", leads: "+2M de vues", time: "30h économisées/semaine" },
     testimonial: "ABS Corporation a révolutionné notre approche de la communication publique. Les résultats parlent d'eux-mêmes.",
-    image: "/portfolio/case-3.jpg",
+    image: "https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?w=800&h=600&fit=crop",
   },
 ];
 
@@ -265,7 +265,7 @@ export const BLOG_POSTS = [
     category: "Digital Human Branding",
     date: "2025-02-15",
     readTime: "8 min",
-    image: "/blog/post-1.jpg",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop",
   },
   {
     id: "2",
@@ -275,7 +275,7 @@ export const BLOG_POSTS = [
     category: "Prompt Engineering",
     date: "2025-02-10",
     readTime: "12 min",
-    image: "/blog/post-2.jpg",
+    image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=500&fit=crop",
   },
   {
     id: "3",
@@ -285,7 +285,7 @@ export const BLOG_POSTS = [
     category: "Éthique IA",
     date: "2025-02-05",
     readTime: "6 min",
-    image: "/blog/post-3.jpg",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=500&fit=crop",
   },
   {
     id: "4",
@@ -295,7 +295,7 @@ export const BLOG_POSTS = [
     category: "IA & Leadership",
     date: "2025-01-28",
     readTime: "10 min",
-    image: "/blog/post-4.jpg",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
   },
   {
     id: "5",
@@ -305,7 +305,7 @@ export const BLOG_POSTS = [
     category: "Digital Human Branding",
     date: "2025-01-20",
     readTime: "7 min",
-    image: "/blog/post-5.jpg",
+    image: "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&h=500&fit=crop",
   },
 ];
 

@@ -41,7 +41,7 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      <div className="container-abs relative z-10 w-full">
+      <div className="container-abs relative pt-20 z-10 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-screen py-32 lg:py-0">
           {/* ── Left Content ── */}
           <motion.div
@@ -52,8 +52,8 @@ export default function Hero() {
           >
             {/* Badge */}
             <motion.div variants={childVariants}>
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#5B21B6]/40 bg-[#5B21B6]/5 text-sm text-[#5B21B6] font-medium tracking-wide mb-8">
-                <Sparkles size={14} className="text-[#5B21B6]" />
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#D4AF37]/50 bg-[#D4AF37]/5 text-sm text-[#B8860B] font-medium tracking-wide mb-8">
+                <Sparkles size={14} className="text-[#D4AF37]" />
                 Pioneer du Digital Human Branding en Afrique
               </span>
             </motion.div>
@@ -153,7 +153,7 @@ export default function Hero() {
 
               {/* Orbiting dot */}
               <motion.div
-                className="absolute w-3 h-3 rounded-full bg-[#5B21B6] shadow-[0_0_12px_rgba(91,33,182,0.6)]"
+                className="absolute w-3 h-3 rounded-full bg-[#D4AF37] shadow-[0_0_12px_rgba(212,175,55,0.6)]"
                 style={{ top: "50%", left: "50%" }}
                 animate={{
                   x: [0, 200, 0, -200, 0],
@@ -169,7 +169,7 @@ export default function Hero() {
 
               {/* Floating badge */}
               <motion.div
-                className="absolute bottom-12 -left-4 bg-[#FFFFFF] border border-[#5B21B6]/30 rounded-xl px-4 py-3 shadow-lg"
+                className="absolute bottom-12 -left-4 bg-[#FFFFFF] border border-[#D4AF37]/40 rounded-xl px-4 py-3 shadow-lg shadow-[#D4AF37]/10"
                 animate={{ y: [0, -8, 0] }}
                 transition={{
                   duration: 3,
@@ -185,14 +185,14 @@ export default function Hero() {
                 >
                   Avatar System&#8482;
                 </p>
-                <p className="text-[10px] text-[#6B7280]">
+                <p className="text-[10px] text-[#D4AF37] font-medium">
                   Prêt en 72H
                 </p>
               </motion.div>
 
               {/* Floating badge top-right */}
               <motion.div
-                className="absolute top-16 -right-2 bg-[#FFFFFF] border border-[#7C3AED]/30 rounded-xl px-4 py-3 shadow-lg"
+                className="absolute top-16 -right-2 bg-[#FFFFFF] border border-[#D4AF37]/40 rounded-xl px-4 py-3 shadow-lg shadow-[#D4AF37]/10"
                 animate={{ y: [0, 6, 0] }}
                 transition={{
                   duration: 4,
@@ -201,14 +201,14 @@ export default function Hero() {
                 }}
               >
                 <p
-                  className="text-xs font-semibold text-[#7C3AED]"
+                  className="text-xs font-semibold text-[#5B21B6]"
                   style={{
                     fontFamily: "var(--font-sub), system-ui, sans-serif",
                   }}
                 >
                   +10 Langues
                 </p>
-                <p className="text-[10px] text-[#6B7280]">
+                <p className="text-[10px] text-[#D4AF37] font-medium">
                   Clonage Vocal IA
                 </p>
               </motion.div>

@@ -75,7 +75,7 @@ export default function Counter({
       <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#5B21B6] tabular-nums">
         <AnimatedNumber value={isInView ? end : 0} />
         {suffix && (
-          <span className="text-[#7C3AED]">{suffix}</span>
+          <span className="text-[#D4AF37]">{suffix}</span>
         )}
       </div>
       <p className="mt-2 text-sm md:text-base text-[#6B7280] font-medium">

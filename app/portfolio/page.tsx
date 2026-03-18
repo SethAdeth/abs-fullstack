@@ -91,7 +91,7 @@ function CaseStudyCardCustom({
         <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#5B21B6]/10 rounded-full blur-[30px] translate-y-1/2 -translate-x-1/2" />
 
         {/* Sector Badge */}
-        <span className="absolute top-4 left-4 px-3 py-1 text-xs font-semibold uppercase tracking-wider bg-[#5B21B6] text-white rounded-full">
+        <span className="absolute top-4 left-4 px-3 py-1 text-xs font-semibold uppercase tracking-wider bg-gradient-to-r from-[#D4AF37] to-[#B8860B] text-white rounded-full shadow-sm">
           {study.sector}
         </span>
 

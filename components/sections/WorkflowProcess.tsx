@@ -36,7 +36,7 @@ export default function WorkflowProcess() {
             <div className="relative">
               {/* Connecting line */}
               <div
-                className="absolute top-7 left-0 right-0 h-0.5 bg-gradient-to-r from-violet/20 via-violet to-violet/20"
+                className="absolute top-7 left-0 right-0 h-0.5 bg-gradient-to-r from-violet/20 via-gold to-violet/20"
                 aria-hidden="true"
               />
 
@@ -51,7 +51,7 @@ export default function WorkflowProcess() {
                     className="flex flex-col items-center text-center"
                   >
                     {/* Numbered circle */}
-                    <div className="relative z-10 w-14 h-14 rounded-full bg-violet text-white flex items-center justify-center text-lg font-bold shadow-[0_0_20px_rgba(91,33,182,0.3)] mb-5">
+                    <div className="relative z-10 w-14 h-14 rounded-full bg-violet text-white flex items-center justify-center text-lg font-bold shadow-[0_0_20px_rgba(91,33,182,0.3)] mb-5 ring-2 ring-gold/30 ring-offset-2 ring-offset-blanc-alt">
                       {step.step}
                     </div>
 
@@ -80,7 +80,7 @@ export default function WorkflowProcess() {
             <div className="relative pl-10 md:pl-14">
               {/* Vertical connecting line */}
               <div
-                className="absolute left-5 md:left-7 top-0 bottom-0 w-0.5 bg-gradient-to-b from-violet via-violet/50 to-violet/20"
+                className="absolute left-5 md:left-7 top-0 bottom-0 w-0.5 bg-gradient-to-b from-violet via-gold to-violet/20"
                 aria-hidden="true"
               />
 
@@ -95,7 +95,7 @@ export default function WorkflowProcess() {
                     className="relative"
                   >
                     {/* Numbered circle */}
-                    <div className="absolute -left-10 md:-left-14 top-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-violet text-white flex items-center justify-center text-sm md:text-base font-bold shadow-[0_0_16px_rgba(91,33,182,0.3)]">
+                    <div className="absolute -left-10 md:-left-14 top-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-violet text-white flex items-center justify-center text-sm md:text-base font-bold shadow-[0_0_16px_rgba(91,33,182,0.3)] ring-2 ring-gold/30 ring-offset-2 ring-offset-blanc-alt">
                       {step.step}
                     </div>
 

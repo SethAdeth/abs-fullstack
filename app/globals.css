@@ -22,6 +22,11 @@
   --color-gris-border: #E5E7EB;
   --color-danger: #DC2626;
 
+  /* ── Gold Accent ── */
+  --color-gold: #D4AF37;
+  --color-gold-light: #F0D060;
+  --color-gold-dark: #B8860B;
+
   /* ── Font Families ── */
   --font-heading: var(--font-playfair);
   --font-sub: var(--font-syne);
@@ -207,12 +212,17 @@
    UTILITY LAYER — Custom utility classes
    ══════════════════════════════════════════ */
 @layer utilities {
-  /* ── Violet Gradient Text ── */
+  /* ── Violet-Gold Gradient Text ── */
   .text-gradient-gold {
-    background: linear-gradient(135deg, #5B21B6 0%, #7C3AED 50%, #5B21B6 100%);
+    background: linear-gradient(135deg, #5B21B6 0%, #D4AF37 50%, #5B21B6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  /* ── Gold shimmer for badges ── */
+  .badge-gold-border {
+    border-image: linear-gradient(135deg, #D4AF37 0%, #F0D060 50%, #D4AF37 100%) 1;
   }
 
   /* ── Custom Animations ── */

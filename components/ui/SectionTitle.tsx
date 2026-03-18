@@ -33,10 +33,10 @@ export default function SectionTitle({
         {title}
       </h2>
 
-      {/* Violet underline accent bar */}
+      {/* Gold-Violet underline accent bar */}
       <div
         className={cn(
-          "mt-4 h-1 w-16 rounded-full bg-gradient-to-r from-[#5B21B6] to-[#7C3AED]",
+          "mt-4 h-1 w-16 rounded-full bg-gradient-to-r from-violet via-gold to-violet",
           centered && "mx-auto"
         )}
         aria-hidden="true"

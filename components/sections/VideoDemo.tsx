@@ -63,7 +63,7 @@ export default function VideoDemo() {
             </div>
 
             {/* Corner labels */}
-            <div className="absolute top-4 left-4 px-3 py-1.5 rounded-md bg-white/80 border border-violet/20 text-xs text-violet font-medium">
+            <div className="absolute top-4 left-4 px-3 py-1.5 rounded-md bg-white/80 border border-[#D4AF37]/30 text-xs text-[#B8860B] font-medium">
               Démonstration Avatar IA
             </div>
             <div className="absolute bottom-4 right-4 px-3 py-1.5 rounded-md bg-white/80 border border-violet/20 text-xs text-gris">
@@ -79,9 +79,9 @@ export default function VideoDemo() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="flex items-center justify-center gap-2 mb-16"
         >
-          <CheckCircle size={18} className="text-violet" />
+          <CheckCircle size={18} className="text-[#D4AF37]" />
           <span className="text-sm text-gris">
-            <span className="text-violet font-semibold">
+            <span className="text-[#D4AF37] font-semibold">
               Verified by ABS Corp&#8482;
             </span>{" "}
             &mdash; Authenticité IA Garantie

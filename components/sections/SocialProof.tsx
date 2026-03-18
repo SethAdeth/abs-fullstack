@@ -16,7 +16,7 @@ export default function SocialProof() {
     <section className="relative bg-[#F5F3FF] py-12 md:py-16 border-t border-b border-[#5B21B6]/10">
       {/* Label */}
       <p className="text-center text-xs md:text-sm uppercase tracking-[0.2em] text-[#6B7280]/60 font-medium mb-8">
-        Technologies &amp; Partenaires de confiance
+        <span className="text-[#D4AF37]">&bull;</span> Technologies &amp; Partenaires de confiance <span className="text-[#D4AF37]">&bull;</span>
       </p>
 
       {/* Scrolling band */}
@@ -40,7 +40,7 @@ export default function SocialProof() {
                 "hover:border-[#5B21B6]/30 transition-all duration-300"
               )}
             >
-              <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-[#5B21B6]/10 text-[#5B21B6] text-xs font-bold">
+              <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-[#D4AF37]/10 text-[#D4AF37] text-xs font-bold">
                 {partner.initials}
               </span>
               <span
@@ -64,7 +64,7 @@ export default function SocialProof() {
                 "hover:border-[#5B21B6]/30 transition-all duration-300"
               )}
             >
-              <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-[#5B21B6]/10 text-[#5B21B6] text-xs font-bold">
+              <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-[#D4AF37]/10 text-[#D4AF37] text-xs font-bold">
                 {partner.initials}
               </span>
               <span
