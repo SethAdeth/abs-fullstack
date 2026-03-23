@@ -28,7 +28,7 @@ import { ACADEMY_PROGRAMS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
-const SKOOL_URL = "https://www.skool.com/abs-academie/about";
+const SKOOL_URL = "https://beta.komunitya.pro/about/d64f3d48-27aa-4da5-953a-8fd2169052e6";
 
 /* ══════════════════════════════════════════════════════════════════
    ABS Academie Page
