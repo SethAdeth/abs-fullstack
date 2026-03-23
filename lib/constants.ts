@@ -5,7 +5,7 @@ export const SITE_CONFIG = {
   description: "Le premier cabinet africain de Digital Human Branding. Transformez votre expertise en actif numérique immortel grâce à l'IA.",
   url: "https://abscorporation.com",
   email: "contact@abscorporation.com",
-  whatsapp: "+228XXXXXXXX",
+  whatsapp: "+22879199394",
   whatsappMessage: "Bonjour ABS Corporation, je souhaite en savoir plus sur vos services de Digital Human Branding.",
   address: "Lomé, Togo",
   socials: {
@@ -21,10 +21,10 @@ export const NAV_LINKS = [
   { label: "Accueil", href: "/" },
   { label: "Services", href: "/services" },
   { label: "ABS Académie", href: "/academie" },
-  { label: "Portfolio", href: "/portfolio" },
+  // { label: "Portfolio", href: "/portfolio" },
   { label: "À Propos", href: "/about" },
   { label: "Tarifs", href: "/tarifs" },
-  { label: "Blog", href: "/blog" },
+  // { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -102,19 +102,25 @@ export const TEAM_MEMBERS = [
     name: "Raphael Sossoe",
     role: "CEO & Fondateur",
     bio: "Visionnaire du Digital Human Branding en Afrique, Raphael a fondé ABS Corporation avec la conviction que chaque leader mérite une présence numérique immortelle.",
-    avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
+    avatar: "/members/PORTRAIT CEO.jpg",
   },
   {
     name: "Aimé Kook",
     role: "Chief AI Officer",
     bio: "Expert en intelligence artificielle et en technologies de synthèse vocale et vidéo, Aimé dirige l'innovation technologique d'ABS Corporation.",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    avatar: "/members/PORTAIT AIME.jpg",
   },
   {
-    name: "L'Équipe Forge",
-    role: "Prompt Engineers & Creative Technologists",
-    bio: "Notre équipe multidisciplinaire combine expertise en IA, production vidéo et storytelling pour créer des avatars qui captent l'essence de chaque leader.",
-    avatar: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=400&fit=crop&crop=faces",
+    name: "Frank Sossoe",
+    role: "Product Manager",
+    bio: "Architecte des solutions technologiques, Frank supervise la création et l'optimisation de nos produits pour garantir une performance et une innovation constantes.",
+    avatar: "/members/PORTRAIT FRANK.jpg",
+  },
+  {
+    name: "Amina Del",
+    role: "Brand manager",
+    bio: "Spécialiste en branding et marketing digital, Amina est la garante de l'identité et de la réputation des leaders que nous accompagnons.",
+    avatar: "/members/PORTRAT AMINA.jpg",
   },
 ];
 
@@ -178,6 +184,7 @@ export const PRICING_PLANS = {
       name: "SILVER",
       subtitle: "Autorité",
       price: 500000,
+      promoPrice: 400000,
       currency: "FCFA/mois",
       popular: true,
       features: {
@@ -199,6 +206,7 @@ export const PRICING_PLANS = {
       name: "GOLD",
       subtitle: "Empire",
       price: 800000,
+      promoPrice: 700000,
       currency: "FCFA/mois",
       features: {
         videos: "20 vidéos quotidiennes",

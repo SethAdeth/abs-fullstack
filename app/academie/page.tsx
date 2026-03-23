@@ -26,6 +26,9 @@ import Button from "@/components/ui/Button";
 import SectionTitle from "@/components/ui/SectionTitle";
 import { ACADEMY_PROGRAMS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
+
+const SKOOL_URL = "https://www.skool.com/abs-academie/about";
 
 /* ══════════════════════════════════════════════════════════════════
    ABS Academie Page
@@ -92,6 +95,7 @@ const TESTIMONIALS = [
     author: "Amadou Diallo",
     role: "Directeur Marketing, Dakar",
     rating: 5,
+    avatar: "/images/testimonials/amadou-diallo.jpg",
   },
   {
     quote:
@@ -99,6 +103,7 @@ const TESTIMONIALS = [
     author: "Fatima Ouedraogo",
     role: "Coach Business, Ouagadougou",
     rating: 5,
+    avatar: "/images/testimonials/fatima-ouedraogo.jpg",
   },
   {
     quote:
@@ -106,6 +111,7 @@ const TESTIMONIALS = [
     author: "Jean-Paul Mensah",
     role: "CEO Tech, Lomé",
     rating: 5,
+    avatar: "/images/testimonials/jean-paul-mensah.jpg",
   },
 ];
 
@@ -202,10 +208,15 @@ function ProgramCard({
       </AnimatePresence>
 
       {/* CTA */}
-      <Button href="/contact" variant="secondary" size="sm">
-        S&apos;inscrire
+      <a
+        href={SKOOL_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-[#5B21B6] text-[#5B21B6] text-sm font-medium hover:bg-[#5B21B6] hover:text-white transition-all duration-300"
+      >
+        Intégrer l&apos;Academy
         <ArrowRight size={16} />
-      </Button>
+      </a>
     </motion.div>
   );
 }
@@ -256,8 +267,8 @@ export default function AcademiePage() {
               style={{ fontFamily: "var(--font-heading), Georgia, serif" }}
             >
               Devenez{" "}
-              <span className="text-gradient-gold">Maître de l&apos;IA</span>{" "}
-              pour votre Business
+              <span className="text-gradient-gold">Expert en Digital Human Branding</span>{" "}
+              assisité par l'IA
             </motion.h1>
 
             {/* Subtitle */}
@@ -278,10 +289,15 @@ export default function AcademiePage() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="flex flex-wrap gap-4"
             >
-              <Button href="#programmes" size="lg">
-                Voir les programmes
+              <a
+                href={SKOOL_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-[#5B21B6] text-white font-medium hover:bg-[#4C1D95] transition-all duration-300 text-base"
+              >
+                Intégrer l&apos;Academy
                 <ArrowRight size={18} />
-              </Button>
+              </a>
               <Button href="/contact" variant="secondary" size="lg">
                 Nous contacter
               </Button>
@@ -289,7 +305,7 @@ export default function AcademiePage() {
           </div>
 
           {/* Decorative Stats */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -308,7 +324,7 @@ export default function AcademiePage() {
                 <p className="text-sm text-[#6B7280] mt-1">{stat.label}</p>
               </div>
             ))}
-          </motion.div>
+          </motion.div> */}
         </div>
       </section>
 
@@ -475,18 +491,28 @@ export default function AcademiePage() {
                 </div>
 
                 {/* Author */}
-                <div className="border-t border-[#5B21B6]/10 pt-4">
-                  <p
-                    className="text-[#1F2937] font-semibold text-sm"
-                    style={{
-                      fontFamily: "var(--font-sub), system-ui, sans-serif",
-                    }}
-                  >
-                    {testimonial.author}
-                  </p>
-                  <p className="text-[#6B7280] text-xs mt-1">
-                    {testimonial.role}
-                  </p>
+                <div className="border-t flex flex-col border-[#5B21B6]/10 pt-4">
+                  <Image
+                    src={testimonial.avatar}
+                    alt={testimonial.author}
+                    width={50}
+                    height={50}
+                    className="rounded-full"
+                  />
+                  <div className="flex items-center gap-3">
+                    <p
+                      className="text-[#1F2937] font-semibold text-sm"
+                      style={{
+                        fontFamily: "var(--font-sub), system-ui, sans-serif",
+                      }}
+                    >
+                      {testimonial.author}
+                    </p>
+                    <p className="text-[#6B7280] text-xs mt-1">
+                      {testimonial.role}
+                    </p>
+                  </div>
+
                 </div>
               </motion.div>
             ))}
@@ -515,20 +541,21 @@ export default function AcademiePage() {
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
               style={{ fontFamily: "var(--font-heading), Georgia, serif" }}
             >
-              Prêt à maîtriser l&apos;IA ?
+              Prêt pour devenir le pionnier du Digital Human Branding en Afrique?
             </h2>
             <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto">
               Rejoignez la prochaine session de formation ABS Académie et
               transformez votre approche du business digital.
             </p>
-            <Button
-              href="/contact"
-              variant="white"
-              size="lg"
+            <a
+              href={SKOOL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-white text-[#5B21B6] font-medium hover:bg-white/90 transition-all duration-300 text-base"
             >
-              Réserver ma place
+              Intégrer l&apos;Academy
               <ArrowRight size={18} />
-            </Button>
+            </a>
           </motion.div>
         </div>
       </section>

@@ -53,7 +53,7 @@ const SERVICE_FAQ = [
   {
     question: "Combien de temps faut-il pour créer un avatar ?",
     answer:
-      "L'Avatar System est livré en 72 heures après votre session de captation. Le Branding IA 360° nécessite environ 2 semaines. L'Ambassadeur Immortel, étant notre offre la plus complète, est déployé en 4 semaines avec un suivi de 3 mois.",
+      "L'Avatar System est livré en 72 heures après votre session de captation. Le Branding IA 360° nécessite environ 2 semaines. L'Architectures de souveraineté numérique et ingénierie d'autorité pour les décideurs qui façonnent le futur., étant notre offre la plus complète, est déployé en 4 semaines avec un suivi de 3 mois.",
   },
   {
     question: "Dans quelles langues mon avatar peut-il s'exprimer ?",
@@ -126,8 +126,8 @@ export default function ServicesPage() {
             <span className="text-gradient-gold">&amp; Programmes</span>
           </h1>
           <p className="mt-6 text-lg md:text-xl text-[#6B7280] max-w-2xl leading-relaxed">
-            Des solutions d&apos;ing&eacute;nierie identitaire sur-mesure pour
-            les leaders qui refusent l&apos;ordinaire.
+            Architectures de souveraineté numérique et ingénierie
+            d'autorité pour les décideurs qui façonnent le futur.
           </p>
         </div>
       </section>
@@ -278,8 +278,8 @@ export default function ServicesPage() {
                 </div>
                 {/* Premium column header */}
                 <div className="p-4 md:p-5 text-center border-b border-[#5B21B6]/40 bg-[#5B21B6]/10 relative">
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                    <span className="px-3 py-1 text-[10px] font-bold uppercase tracking-widest bg-[#5B21B6] text-white rounded-full">
+                  <div className="absolute mt-4 top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <span className="px-3 py-1 text-[8px] font-bold uppercase tracking-widest bg-[#5B21B6] text-white rounded-full">
                       Premium
                     </span>
                   </div>

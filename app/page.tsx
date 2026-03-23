@@ -17,7 +17,7 @@ export default function Home() {
       <VideoDemo />
       <ServicesPreview />
       <WorkflowProcess />
-      <CaseStudiesPreview />
+      {/* <CaseStudiesPreview /> */}
       <CTAFinal />
       <FAQHome />
     </>

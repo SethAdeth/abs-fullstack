@@ -94,12 +94,12 @@ export default function Navbar() {
 
         {/* Desktop CTA Buttons */}
         <div className="hidden lg:flex items-center gap-3">
-          <Link
+          {/* <Link
             href="/sign-in"
             className="px-4 py-2 text-sm font-medium text-[#1F2937] hover:text-[#5B21B6] transition-colors duration-300"
           >
             Se connecter
-          </Link>
+          </Link> */}
           <Link
             href="/contact"
             className="px-5 py-2.5 text-sm font-bold bg-[#5B21B6] text-white rounded-lg hover:bg-[#7C3AED] transition-all duration-300 hover:shadow-lg hover:shadow-[#5B21B6]/20"
@@ -178,13 +178,13 @@ export default function Navbar() {
                 transition={{ delay: 0.05 * (NAV_LINKS.length + 1) }}
                 className="flex flex-col items-center gap-4 mt-6 w-full max-w-xs"
               >
-                <Link
+                {/* <Link
                   href="/sign-in"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-lg font-medium text-[#1F2937] hover:text-[#5B21B6] transition-colors duration-300"
                 >
                   Se connecter
-                </Link>
+                </Link> */}
                 <Link
                   href="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}

@@ -5,7 +5,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   ChevronRight,
-  Send,
   MessageCircle,
   Mail,
   CalendarDays,
@@ -185,16 +184,49 @@ export default function ContactPage() {
     return Object.keys(newErrors).length === 0;
   }
 
+  function buildWhatsAppMessage(): string {
+    const lines = [
+      `Bonjour ABS Corporation,`,
+      ``,
+      `Je souhaite un Diagnostic d'Autorité gratuit.`,
+      ``,
+      `--- Mes informations ---`,
+      `Nom : ${form.prenom} ${form.nom}`,
+      `Poste : ${form.titre}`,
+      `Entreprise : ${form.entreprise}`,
+      `Email : ${form.email}`,
+      `WhatsApp : ${form.whatsapp}`,
+      `Pays : ${form.pays}`,
+      `Ville : ${form.ville}`,
+      `Secteur : ${form.secteur}`,
+    ];
+    if (form.services.length > 0) {
+      lines.push(`Services d'intérêt : ${form.services.join(", ")}`);
+    }
+    if (form.objectif) {
+      lines.push(`Objectif principal : ${form.objectif}`);
+    }
+    if (form.message.trim()) {
+      lines.push(``, `Message :`, form.message.trim());
+    }
+    lines.push(``, `Merci de votre retour !`);
+    return lines.join("\n");
+  }
+
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
     if (!validate()) return;
 
     setIsSubmitting(true);
-    // Simulate network request
+    const message = buildWhatsAppMessage();
+    const whatsappUrl = `https://wa.me/22879199394?text=${encodeURIComponent(message)}`;
+
+    // Small delay for UX, then redirect to WhatsApp
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitted(true);
-    }, 1500);
+      window.open(whatsappUrl, "_blank");
+    }, 800);
   }
 
   /* ── WhatsApp link ── */
@@ -291,19 +323,18 @@ export default function ContactPage() {
                           "var(--font-heading), Georgia, serif",
                       }}
                     >
-                      Demande envoyée avec succès !
+                      Message prêt sur WhatsApp !
                     </h2>
                     <p className="text-[#6B7280] text-lg max-w-md mx-auto mb-2">
-                      Merci{form.prenom ? ` ${form.prenom}` : ""} ! Notre
-                      équipe vous contactera dans les{" "}
+                      Merci{form.prenom ? ` ${form.prenom}` : ""} ! Votre
+                      message a été préparé et ouvert dans WhatsApp.{" "}
                       <span className="text-[#5B21B6] font-semibold">
-                        24 heures
+                        Appuyez sur Envoyer
                       </span>{" "}
-                      pour votre Diagnostic d&apos;Autorité gratuit.
+                      pour nous contacter.
                     </p>
                     <p className="text-[#6B7280] text-sm mt-4">
-                      Vérifiez votre boîte email ({form.email}) et votre
-                      WhatsApp.
+                      Notre équipe vous répondra dans les 24 heures.
                     </p>
                     <div className="mt-8">
                       <Button href="/" variant="secondary">
@@ -743,12 +774,12 @@ export default function ContactPage() {
                       {isSubmitting ? (
                         <>
                           <span className="inline-block w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                          Envoi en cours...
+                          Redirection WhatsApp...
                         </>
                       ) : (
                         <>
-                          <Send className="w-5 h-5" />
-                          Envoyer ma demande de Diagnostic
+                          <MessageCircle className="w-5 h-5" />
+                          Envoyer via WhatsApp
                         </>
                       )}
                     </Button>
@@ -917,7 +948,7 @@ export default function ContactPage() {
       </section>
 
       {/* ════════════════════════════════════════
-          MAP PLACEHOLDER
+          MAP — Lomé, Hedranawé
           ════════════════════════════════════════ */}
       <section className="bg-[#F5F3FF] pb-16">
         <div className="container-abs">
@@ -927,29 +958,37 @@ export default function ContactPage() {
             viewport={{ once: true }}
             variants={fadeUp}
             custom={0}
-            className="bg-[#FFFFFF] rounded-xl h-64 flex flex-col items-center justify-center border border-[#E5E7EB] shadow-sm relative overflow-hidden"
+            className="rounded-xl overflow-hidden border border-[#E5E7EB] shadow-sm"
           >
-            {/* Placeholder map pattern */}
-            <div className="absolute inset-0 opacity-5">
-              <div className="absolute inset-0 bg-[repeating-linear-gradient(0deg,transparent,transparent_20px,#5B21B6_20px,#5B21B6_21px),repeating-linear-gradient(90deg,transparent,transparent_20px,#5B21B6_20px,#5B21B6_21px)]" />
-            </div>
-
-            <div className="relative z-10 text-center">
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#5B21B6]/10 mb-4">
-                <MapPin className="w-7 h-7 text-[#5B21B6]" />
+            {/* Location header */}
+            <div className="bg-white px-6 py-4 flex items-center gap-3 border-b border-[#E5E7EB]">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#5B21B6]/10 flex items-center justify-center">
+                <MapPin className="w-5 h-5 text-[#5B21B6]" />
               </div>
-              <p
-                className="text-[#1F2937] text-lg font-bold mb-1"
-                style={{
-                  fontFamily: "var(--font-sub), system-ui, sans-serif",
-                }}
-              >
-                Lomé, Togo
-              </p>
-              <p className="text-[#6B7280] text-sm">
-                Siège Social — {SITE_CONFIG.fullName}
-              </p>
+              <div>
+                <p
+                  className="text-[#1F2937] font-bold"
+                  style={{ fontFamily: "var(--font-sub), system-ui, sans-serif" }}
+                >
+                  Hedranawé, Lomé, Togo
+                </p>
+                <p className="text-[#6B7280] text-sm">
+                  Siège Social — {SITE_CONFIG.fullName}
+                </p>
+              </div>
             </div>
+            {/* Real map embed */}
+            <iframe
+              title="ABS Corporation - Lomé, Hedranawé"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=1.1950%2C6.1650%2C1.2250%2C6.1850&layer=mapnik&marker=6.1756%2C1.2100"
+              width="100%"
+              height="350"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full"
+            />
           </motion.div>
         </div>
       </section>

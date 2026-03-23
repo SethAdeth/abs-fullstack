@@ -161,8 +161,8 @@ export default function AboutPage() {
             <p className="text-lg leading-relaxed text-[#6B7280]">
               ABS Corporation est n&eacute;e d&apos;une conviction simple mais
               puissante : <strong className="text-[#1F2937]">chaque leader m&eacute;rite
-              une pr&eacute;sence num&eacute;rique &agrave; la hauteur de son
-              expertise</strong>. Gr&acirc;ce &agrave; l&apos;intelligence
+                une pr&eacute;sence num&eacute;rique &agrave; la hauteur de son
+                expertise</strong>. Gr&acirc;ce &agrave; l&apos;intelligence
               artificielle et &agrave; l&apos;ing&eacute;nierie identitaire, nous
               transformons l&apos;expertise des leaders africains en actifs
               num&eacute;riques immortels et automatis&eacute;s.
@@ -180,18 +180,16 @@ export default function AboutPage() {
                 return (
                   <div
                     key={index}
-                    className={`relative flex items-start gap-8 ${
-                      isLeft ? "md:flex-row" : "md:flex-row-reverse"
-                    }`}
+                    className={`relative flex items-start gap-8 ${isLeft ? "md:flex-row" : "md:flex-row-reverse"
+                      }`}
                   >
                     {/* Dot */}
                     <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-[#5B21B6] border-4 border-[#FFFFFF] z-10 mt-2" />
 
                     {/* Content */}
                     <div
-                      className={`ml-12 md:ml-0 md:w-[calc(50%-2rem)] ${
-                        isLeft ? "md:pr-8 md:text-right" : "md:pl-8 md:text-left"
-                      }`}
+                      className={`ml-12 md:ml-0 md:w-[calc(50%-2rem)] ${isLeft ? "md:pr-8 md:text-right" : "md:pl-8 md:text-left"
+                        }`}
                     >
                       <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest text-[#5B21B6] bg-[#5B21B6]/10 rounded-full border border-[#5B21B6]/20 mb-3">
                         {milestone.year}
@@ -239,12 +237,12 @@ export default function AboutPage() {
               </h3>
               <p className="text-[#6B7280] text-base md:text-lg leading-relaxed mb-4">
                 Devenir la <strong className="text-[#5B21B6]">r&eacute;f&eacute;rence
-                n&deg;1 en Afrique</strong> dans le branding assist&eacute; par
+                  n&deg;1 en Afrique</strong> dans le branding assist&eacute; par
                 l&apos;IA.
               </p>
               <p className="text-[#6B7280] text-base md:text-lg leading-relaxed">
                 Pionnier du <strong className="text-[#1F2937]">Digital Human
-                Branding en Afrique</strong>, nous tra&ccedil;ons la voie vers un
+                  Branding en Afrique</strong>, nous tra&ccedil;ons la voie vers un
                 futur o&ugrave; chaque leader poss&egrave;de un jumeau
                 num&eacute;rique qui perp&eacute;tue son h&eacute;ritage.
               </p>
@@ -264,7 +262,7 @@ export default function AboutPage() {
               <p className="text-[#6B7280] text-base md:text-lg leading-relaxed">
                 Transformer l&apos;expertise des leaders africains en{" "}
                 <strong className="text-[#1F2937]">actifs num&eacute;riques
-                immortels et automatis&eacute;s</strong>, gr&acirc;ce &agrave;
+                  immortels et automatis&eacute;s</strong>, gr&acirc;ce &agrave;
                 l&apos;intelligence artificielle et la strat&eacute;gie de
                 contenu. Nous rendons l&apos;excellence accessible, la
                 pr&eacute;sence permanente et l&apos;influence
@@ -314,11 +312,11 @@ export default function AboutPage() {
       <section className="bg-[#F5F3FF] section-padding">
         <div className="container-abs">
           <SectionTitle
-            title="The Squad"
+            title="L'équipe"
             subtitle="L&apos;\u00e9quipe qui transforme la vision en r\u00e9alit\u00e9."
           />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto">
             {TEAM_MEMBERS.map((member) => (
               <TeamCard
                 key={member.name}
@@ -360,14 +358,14 @@ export default function AboutPage() {
                 Chez ABS Corporation, l&apos;&eacute;thique n&apos;est pas une
                 option &mdash; c&apos;est un pilier fondateur. Notre{" "}
                 <strong className="text-[#1F2937]">Charte de
-                Souverainet&eacute; Num&eacute;rique</strong> garantit que vous
+                  Souverainet&eacute; Num&eacute;rique</strong> garantit que vous
                 restez le propri&eacute;taire exclusif et souverain de votre
                 identit&eacute; num&eacute;rique.
               </p>
               <p className="text-[#6B7280] text-base md:text-lg leading-relaxed mb-4">
                 Chaque avatar cr&eacute;&eacute; est prot&eacute;g&eacute; dans
                 notre <strong className="text-[#5B21B6]">Identit&eacute;
-                Vault</strong> s&eacute;curis&eacute;. Chaque vid&eacute;o
+                  Vault</strong> s&eacute;curis&eacute;. Chaque vid&eacute;o
                 produite porte le watermark{" "}
                 <span className="text-[#5B21B6] font-semibold">
                   &laquo; Verified by ABS Corp&trade; &raquo;

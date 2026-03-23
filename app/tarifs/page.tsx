@@ -12,6 +12,7 @@ import {
   Sparkles,
   Star,
   Zap,
+  MessageCircle,
 } from "lucide-react";
 import Button from "@/components/ui/Button";
 import SectionTitle from "@/components/ui/SectionTitle";
@@ -99,8 +100,15 @@ const FAQ_PRICING = [
 /* ─────────────────────────────────────────────
    Helpers
    ───────────────────────────────────────────── */
+const ABS_WHATSAPP = "22879199394";
+
 function formatPrice(price: number): string {
   return price.toLocaleString("fr-FR");
+}
+
+function getWhatsAppUrl(planName: string, price: string): string {
+  const message = `Bonjour ABS Corporation,\n\nJe suis intéressé(e) par la formule *${planName}* à *${price}*.\n\nJ'aimerais en savoir plus et démarrer. Merci !`;
+  return `https://wa.me/${ABS_WHATSAPP}?text=${encodeURIComponent(message)}`;
 }
 
 function CellIcon({ value }: { value: string | boolean }) {
@@ -280,9 +288,15 @@ export default function TarifsPage() {
                   <span>Livraison en 72 heures</span>
                 </div>
 
-                <Button href="/contact" size="lg">
+                <a
+                  href={getWhatsAppUrl("Pack EMPREINTE", `${formatPrice(empreinte.promoPrice)} FCFA`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-[#25D366] text-white font-medium hover:bg-[#1da851] transition-all duration-300 text-base"
+                >
+                  <MessageCircle className="w-5 h-5" />
                   Commencer maintenant
-                </Button>
+                </a>
               </div>
             </div>
           </motion.div>
@@ -359,14 +373,43 @@ export default function TarifsPage() {
 
                   {/* Price */}
                   <div className="px-6 pt-6 pb-4">
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-4xl md:text-5xl font-bold text-[#5B21B6]">
-                        {formatPrice(plan.price)}
-                      </span>
-                      <span className="text-[#6B7280] text-sm ml-1">
-                        FCFA/mois
-                      </span>
-                    </div>
+                    {plan.promoPrice ? (
+                      <>
+                        {/* Old price - large, strikethrough */}
+                        <div className="flex items-baseline gap-1 mb-1">
+                          <span className="text-3xl md:text-4xl font-bold text-[#6B7280] line-through">
+                            {formatPrice(plan.price)}
+                          </span>
+                          <span className="text-[#6B7280] text-sm ml-1 line-through">
+                            FCFA/mois
+                          </span>
+                        </div>
+                        {/* Promo price - smaller with yellow badge */}
+                        <div className="flex items-center gap-3">
+                          <div className="flex items-baseline gap-1">
+                            <span className="text-2xl md:text-3xl font-bold text-[#5B21B6]">
+                              {formatPrice(plan.promoPrice)}
+                            </span>
+                            <span className="text-[#6B7280] text-xs ml-1">
+                              FCFA/mois
+                            </span>
+                          </div>
+                          <span className="inline-flex items-center gap-1 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
+                            <Zap className="w-3 h-3" />
+                            Offre Spéciale
+                          </span>
+                        </div>
+                      </>
+                    ) : (
+                      <div className="flex items-baseline gap-1">
+                        <span className="text-4xl md:text-5xl font-bold text-[#5B21B6]">
+                          {formatPrice(plan.price)}
+                        </span>
+                        <span className="text-[#6B7280] text-sm ml-1">
+                          FCFA/mois
+                        </span>
+                      </div>
+                    )}
                   </div>
 
                   {/* Feature list */}
@@ -424,14 +467,23 @@ export default function TarifsPage() {
 
                   {/* CTA */}
                   <div className="px-6 pb-6">
-                    <Button
-                      href="/contact"
-                      variant={isPopular ? "primary" : "secondary"}
-                      size="lg"
-                      className="w-full"
+                    <a
+                      href={getWhatsAppUrl(
+                        plan.name,
+                        `${formatPrice(plan.promoPrice || plan.price)} FCFA/mois`
+                      )}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={cn(
+                        "w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg font-medium transition-all duration-300 text-base",
+                        isPopular
+                          ? "bg-[#25D366] text-white hover:bg-[#1da851]"
+                          : "border border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white"
+                      )}
                     >
+                      <MessageCircle className="w-5 h-5" />
                       {isGold ? "Devenir Gold" : "Choisir cette formule"}
-                    </Button>
+                    </a>
                   </div>
                 </motion.div>
               );
@@ -525,9 +577,20 @@ export default function TarifsPage() {
                         plan.id === "silver" && "border-x border-[#5B21B6]/20"
                       )}
                     >
-                      <span className="text-[#5B21B6] font-bold text-lg">
-                        {formatPrice(plan.price)}
-                      </span>
+                      {plan.promoPrice ? (
+                        <>
+                          <span className="text-[#6B7280] font-bold text-sm line-through block">
+                            {formatPrice(plan.price)}
+                          </span>
+                          <span className="text-[#5B21B6] font-bold text-lg">
+                            {formatPrice(plan.promoPrice)}
+                          </span>
+                        </>
+                      ) : (
+                        <span className="text-[#5B21B6] font-bold text-lg">
+                          {formatPrice(plan.price)}
+                        </span>
+                      )}
                       <span className="text-[#6B7280] text-xs block">
                         FCFA/mois
                       </span>
@@ -567,9 +630,15 @@ export default function TarifsPage() {
             <p className="text-[#6B7280] mb-6 text-lg">
               Une question spécifique ? Notre équipe est à votre disposition.
             </p>
-            <Button href="/contact" size="lg">
-              Contactez-nous
-            </Button>
+            <a
+              href={`https://wa.me/${ABS_WHATSAPP}?text=${encodeURIComponent("Bonjour ABS Corporation,\n\nJ'ai une question sur vos tarifs. Pouvez-vous m'aider ?")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-[#25D366] text-white font-medium hover:bg-[#1da851] transition-all duration-300 text-base"
+            >
+              <MessageCircle className="w-5 h-5" />
+              Contactez-nous sur WhatsApp
+            </a>
           </motion.div>
         </div>
       </section>
