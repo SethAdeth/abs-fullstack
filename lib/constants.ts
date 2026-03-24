@@ -5,7 +5,7 @@ export const SITE_CONFIG = {
   description: "Le premier cabinet africain de Digital Human Branding. Transformez votre expertise en actif numérique immortel grâce à l'IA.",
   url: "https://abscorporation.com",
   email: "contact@abscorporation.com",
-  whatsapp: "+22879199394",
+  whatsapp: "+22892813232",
   whatsappMessage: "Bonjour ABS Corporation, je souhaite en savoir plus sur vos services de Digital Human Branding.",
   address: "Lomé, Togo",
   socials: {
@@ -149,21 +149,61 @@ export const FAQ_HOME = [
 
 export const PRICING_PLANS = {
   empreinte: {
-    name: "Pack EMPREINTE",
-    subtitle: "Votre Jumeau Numérique",
-    description: "Session captation pro 4K + Entraînement modèle facial IA + Clonage vocal ultra-réaliste (accent local inclus)",
+    name: "PACK EMPREINTE (Clone Social)",
+    subtitle: "L'Actif Identitaire Souverain",
+    description: "Le socle de votre immortalité numérique.",
     price: 500000,
     promoPrice: 150000,
     currency: "FCFA",
     delay: "72 heures après captation",
-    includes: ["Session captation professionnelle 4K", "Entraînement modèle facial IA", "Clonage vocal ultra-réaliste", "Accent local inclus", "1 vidéo manifeste de 2 minutes", "Fichiers sources sécurisés"],
+    sections: [
+      {
+        title: "Ingénierie de Captation & ADN Visuel",
+        items: [
+          "Protocole \"Studio Premier\" : Session de captation professionnelle en 4K Cinématique pour encoder chaque micro-expression et posture d'autorité.",
+          "Modélisation Faciale IA Haute Fidélité : Entraînement profond de votre modèle pour une fluidité de mouvement indiscernable de la réalité.",
+        ],
+      },
+      {
+        title: "Architecture Vocale & Signature Oratoire",
+        items: [
+          "Clonage Vocal Souverain : Restitution de votre timbre de voix avec une précision chirurgicale.",
+          "Préservation des Nuances : Intégration de vos accents locaux et tics de langage pour une authenticité absolue.",
+        ],
+      },
+      {
+        title: "Livrables Stratégiques (Le Pack de Lancement)",
+        items: [
+          "Le Manifeste de l'Omniprésence : 1 vidéo institutionnelle de 2 minutes, scénarisée pour installer votre autorité dès le premier jour.",
+          "Votre \"Coffre-Fort\" Numérique : Livraison des fichiers sources sécurisés et cryptés, garantissant que vous restez l'unique propriétaire de votre double numérique.",
+        ],
+      },
+      {
+        title: "Avantages Exclusifs ABS Corp",
+        items: [
+          "Standard de Sécurité : Votre avatar est protégé contre les détournements (Anti-Deepfake protocol).",
+          "Souveraineté Totale : Aucun abonnement tiers. Votre actif vous appartient à vie.",
+        ],
+      },
+    ],
+    includes: [
+      "Captation professionnelle 4K Cinématique",
+      "Modélisation Faciale IA Haute Fidélité",
+      "Clonage Vocal Souverain",
+      "Préservation des accents locaux",
+      "1 vidéo manifeste de 2 minutes",
+      "Fichiers sources sécurisés et cryptés",
+      "Anti-Deepfake protocol",
+      "Souveraineté totale à vie",
+    ],
   },
   subscriptions: [
     {
       id: "bronze",
       name: "BRONZE",
       subtitle: "Visibilité",
-      price: 200000,
+      price: 300000,
+      promoPrice: 200000,
       currency: "FCFA/mois",
       features: {
         videos: "8 vidéos (2/semaine)",
@@ -184,7 +224,6 @@ export const PRICING_PLANS = {
       name: "SILVER",
       subtitle: "Autorité",
       price: 500000,
-      promoPrice: 400000,
       currency: "FCFA/mois",
       popular: true,
       features: {

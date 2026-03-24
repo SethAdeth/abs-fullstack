@@ -37,37 +37,37 @@ const COMPARISON_ROWS: {
   silver: string | boolean;
   gold: string | boolean;
 }[] = [
-  {
-    label: "Nombre de vidéos",
-    bronze: "8/mois",
-    silver: "12/mois",
-    gold: "20/jour",
-  },
-  {
-    label: "Langues incluses",
-    bronze: "1",
-    silver: "2",
-    gold: "Illimitées",
-  },
-  { label: "Scripts IA", bronze: true, silver: true, gold: true },
-  {
-    label: "Réponses commentaires IA",
-    bronze: false,
-    silver: true,
-    gold: true,
-  },
-  { label: "Multi-plateforme", bronze: false, silver: false, gold: true },
-  { label: "Ghostwriting VIP", bronze: false, silver: false, gold: true },
-  {
-    label: "Account Manager dédié",
-    bronze: false,
-    silver: false,
-    gold: true,
-  },
-  { label: "Rapport mensuel", bronze: false, silver: true, gold: true },
-  { label: "Groupe WhatsApp VIP", bronze: false, silver: true, gold: true },
-  { label: "Support prioritaire", bronze: false, silver: false, gold: true },
-];
+    {
+      label: "Nombre de vidéos",
+      bronze: "8/mois",
+      silver: "12/mois",
+      gold: "20/jour",
+    },
+    {
+      label: "Langues incluses",
+      bronze: "1",
+      silver: "2",
+      gold: "Illimitées",
+    },
+    { label: "Scripts IA", bronze: true, silver: true, gold: true },
+    {
+      label: "Réponses commentaires IA",
+      bronze: false,
+      silver: true,
+      gold: true,
+    },
+    { label: "Multi-plateforme", bronze: false, silver: false, gold: true },
+    { label: "Ghostwriting VIP", bronze: false, silver: false, gold: true },
+    {
+      label: "Account Manager dédié",
+      bronze: false,
+      silver: false,
+      gold: true,
+    },
+    { label: "Rapport mensuel", bronze: false, silver: true, gold: true },
+    { label: "Groupe WhatsApp VIP", bronze: false, silver: true, gold: true },
+    { label: "Support prioritaire", bronze: false, silver: false, gold: true },
+  ];
 
 const FAQ_PRICING = [
   {
@@ -100,7 +100,7 @@ const FAQ_PRICING = [
 /* ─────────────────────────────────────────────
    Helpers
    ───────────────────────────────────────────── */
-const ABS_WHATSAPP = "22879199394";
+const ABS_WHATSAPP = "22892813232";
 
 function formatPrice(price: number): string {
   return price.toLocaleString("fr-FR");
@@ -210,7 +210,7 @@ export default function TarifsPage() {
       <section className="bg-[#F5F3FF] section-padding">
         <div className="container-abs">
           <SectionTitle
-            title="Pack EMPREINTE — Votre Jumeau Numérique"
+            title="Pack EMPREINTE — L'Actif Identitaire Souverain"
             subtitle={empreinte.description}
             centered
           />
@@ -226,73 +226,83 @@ export default function TarifsPage() {
             {/* Decorative corner glow */}
             <div className="absolute -top-20 -right-20 w-40 h-40 bg-[#5B21B6]/10 rounded-full blur-[60px]" />
 
-            <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 relative z-10">
-              {/* Left — Features */}
-              <div>
-                <h3
-                  className="text-2xl md:text-3xl font-bold text-[#1F2937] mb-2"
-                  style={{
-                    fontFamily: "var(--font-sub), system-ui, sans-serif",
-                  }}
-                >
-                  {empreinte.name}
-                </h3>
-                <p className="text-[#6B7280] mb-8">{empreinte.subtitle}</p>
-
-                <ul className="space-y-4">
-                  {empreinte.includes.map((item, i) => (
-                    <motion.li
-                      key={i}
-                      initial="hidden"
-                      whileInView="visible"
-                      viewport={{ once: true }}
-                      variants={fadeUp}
-                      custom={i}
-                      className="flex items-start gap-3"
-                    >
-                      <span className="flex-shrink-0 mt-0.5">
-                        <Check className="w-5 h-5 text-[#5B21B6]" />
-                      </span>
-                      <span className="text-[#1F2937] text-base md:text-lg">
-                        {item}
-                      </span>
-                    </motion.li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Right — Pricing */}
-              <div className="flex flex-col items-center lg:items-end justify-center text-center lg:text-right">
-                {/* Strikethrough price */}
-                <p className="text-[#6B7280] text-xl line-through mb-2">
-                  {formatPrice(empreinte.price)} {empreinte.currency}
-                </p>
-
-                {/* Promo price */}
-                <p className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#5B21B6] mb-2">
-                  {formatPrice(empreinte.promoPrice)}{" "}
-                  <span className="text-2xl md:text-3xl">
-                    {empreinte.currency}
-                  </span>
-                </p>
-
-                {/* Launch badge */}
-                <span className="inline-flex items-center gap-2 bg-[#5B21B6]/10 text-[#5B21B6] text-sm font-semibold px-4 py-1.5 rounded-full border border-[#5B21B6]/30 mb-4">
-                  <Zap className="w-4 h-4" />
-                  Offre de lancement
-                </span>
-
-                {/* Delivery */}
-                <div className="flex items-center gap-2 text-[#6B7280] mb-8">
-                  <Clock className="w-5 h-5 text-[#5B21B6]" />
-                  <span>Livraison en 72 heures</span>
+            <div className="relative z-10">
+              {/* Header + Price row */}
+              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-10 pb-8 border-b border-[#5B21B6]/15">
+                <div>
+                  <h3
+                    className="text-2xl md:text-3xl font-bold text-[#1F2937] mb-2"
+                    style={{ fontFamily: "var(--font-sub), system-ui, sans-serif" }}
+                  >
+                    {empreinte.name}
+                  </h3>
+                  <p className="text-[#6B7280] text-lg">{empreinte.subtitle}</p>
                 </div>
 
+                <div className="flex flex-col items-center lg:items-end text-center lg:text-right shrink-0">
+                  {/* Strikethrough price */}
+                  <p className="text-[#6B7280] text-xl line-through mb-1">
+                    {formatPrice(empreinte.price)} {empreinte.currency}
+                  </p>
+                  {/* Promo price */}
+                  <p className="text-4xl md:text-5xl font-bold text-[#5B21B6] mb-2">
+                    {formatPrice(empreinte.promoPrice)}{" "}
+                    <span className="text-2xl">{empreinte.currency}</span>
+                  </p>
+                  {/* Launch badge */}
+                  <span className="inline-flex items-center gap-2 bg-yellow-400 text-yellow-900 text-sm font-bold px-4 py-1.5 rounded-full mb-3">
+                    <Zap className="w-4 h-4" />
+                    Offre de lancement
+                  </span>
+                  {/* Delivery */}
+                  <div className="flex items-center gap-2 text-[#6B7280]">
+                    <Clock className="w-4 h-4 text-[#5B21B6]" />
+                    <span className="text-sm">Livraison en 72 heures</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Sections grid */}
+              <div className="grid md:grid-cols-2 gap-8 mb-10">
+                {empreinte.sections?.map((section, sIdx) => (
+                  <motion.div
+                    key={sIdx}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={fadeUp}
+                    custom={sIdx}
+                  >
+                    <h4
+                      className="text-lg font-bold text-[#5B21B6] mb-4 flex items-center gap-2"
+                      style={{ fontFamily: "var(--font-sub), system-ui, sans-serif" }}
+                    >
+                      <span className="flex-shrink-0 w-7 h-7 rounded-full bg-[#5B21B6]/10 flex items-center justify-center text-sm font-bold text-[#5B21B6]">
+                        {sIdx + 1}
+                      </span>
+                      {section.title}
+                    </h4>
+                    <ul className="space-y-3">
+                      {section.items.map((item, iIdx) => (
+                        <li key={iIdx} className="flex items-start gap-3">
+                          <Check className="w-5 h-5 text-[#5B21B6] flex-shrink-0 mt-0.5" />
+                          <span className="text-[#1F2937] text-sm leading-relaxed">
+                            {item}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* CTA */}
+              <div className="text-center">
                 <a
                   href={getWhatsAppUrl("Pack EMPREINTE", `${formatPrice(empreinte.promoPrice)} FCFA`)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-[#25D366] text-white font-medium hover:bg-[#1da851] transition-all duration-300 text-base"
+                  className="inline-flex items-center gap-2 px-10 py-4 rounded-lg bg-[#25D366] text-white font-medium hover:bg-[#1da851] transition-all duration-300 text-lg"
                 >
                   <MessageCircle className="w-5 h-5" />
                   Commencer maintenant
@@ -384,9 +394,15 @@ export default function TarifsPage() {
                             FCFA/mois
                           </span>
                         </div>
+                        <span className="inline-flex items-center gap-1 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
+                          <Zap className="w-3 h-3" />
+                          Offre Spéciale
+                        </span>
                         {/* Promo price - smaller with yellow badge */}
                         <div className="flex items-center gap-3">
+
                           <div className="flex items-baseline gap-1">
+
                             <span className="text-2xl md:text-3xl font-bold text-[#5B21B6]">
                               {formatPrice(plan.promoPrice)}
                             </span>
@@ -394,10 +410,7 @@ export default function TarifsPage() {
                               FCFA/mois
                             </span>
                           </div>
-                          <span className="inline-flex items-center gap-1 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
-                            <Zap className="w-3 h-3" />
-                            Offre Spéciale
-                          </span>
+
                         </div>
                       </>
                     ) : (

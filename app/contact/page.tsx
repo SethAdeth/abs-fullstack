@@ -219,7 +219,7 @@ export default function ContactPage() {
 
     setIsSubmitting(true);
     const message = buildWhatsAppMessage();
-    const whatsappUrl = `https://wa.me/22879199394?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/22892813232?text=${encodeURIComponent(message)}`;
 
     // Small delay for UX, then redirect to WhatsApp
     setTimeout(() => {
