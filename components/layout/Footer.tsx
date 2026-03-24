@@ -157,12 +157,12 @@ export default function Footer() {
               <p className="text-white/40 text-xs">
                 &copy; 2025 {SITE_CONFIG.name} &mdash; {SITE_CONFIG.fullName}
               </p>
-              <Link
+              {/* <Link
                 href="/admin"
                 className="text-white/20 hover:text-white/60 text-xs transition-colors duration-300"
               >
                 Admin
-              </Link>
+              </Link> */}
             </div>
             <div className="flex flex-wrap items-center justify-center gap-4">
               {LEGAL_LINKS.map((link) => (

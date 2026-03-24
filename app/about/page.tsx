@@ -71,7 +71,7 @@ const MILESTONES = [
     year: "2024",
     title: "Premiers Avatars",
     description:
-      "Lancement de l\u2019Avatar System\u2122. Les premiers avatars IA sont cr\u00e9\u00e9s pour des CEO et coaches business en Afrique de l\u2019Ouest. Les r\u00e9sultats d\u00e9passent les attentes.",
+      "Lancement de l\u2019Avatar System\u2122. Les premiers avatars IA sont créés pour des CEO et coaches business en Afrique de l\u2019Ouest. Les r\u00e9sultats d\u00e9passent les attentes.",
   },
   {
     year: "2024",
@@ -278,7 +278,7 @@ export default function AboutPage() {
         <div className="container-abs">
           <SectionTitle
             title="Nos Valeurs"
-            subtitle="Les piliers qui fondent chacune de nos d\u00e9cisions et de nos cr\u00e9ations."
+            subtitle="Les piliers qui fondent chacune de nos décisions et de nos crégations."
           />
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -313,7 +313,7 @@ export default function AboutPage() {
         <div className="container-abs">
           <SectionTitle
             title="L'équipe"
-            subtitle="L&apos;\u00e9quipe qui transforme la vision en r\u00e9alit\u00e9."
+            subtitle="L&apos;équipe qui transforme la vision en réalité."
           />
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto">
@@ -436,10 +436,10 @@ export default function AboutPage() {
           />
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 max-w-5xl mx-auto">
-            <Counter end={50} suffix="+" label="Avatars Cr\u00e9\u00e9s" />
+            <Counter end={50} suffix="+" label="Avatars Créés" />
             <Counter end={30} suffix="+" label="Clients Actifs" />
             <Counter end={10} suffix="+" label="Langues Disponibles" />
-            <Counter end={5000} suffix="+" label="Heures \u00C9conomis\u00e9es" />
+            <Counter end={5000} suffix="+" label="Heures Économisées" />
           </div>
         </div>
       </section>
