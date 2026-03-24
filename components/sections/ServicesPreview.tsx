@@ -20,7 +20,7 @@ export default function ServicesPreview() {
           subtitle="Des solutions sur-mesure pour chaque étape de votre transformation numérique."
         />
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-6 mb-6">
           {SERVICES.map((service) => {
             const Icon = ICON_MAP[service.icon] || User;
             return (
@@ -30,21 +30,29 @@ export default function ServicesPreview() {
                 title={service.title}
                 description={service.subtitle}
                 href={`/services#${service.id}`}
-                ctaLabel="Découvrir →"
+                ctaLabel="Découvrir"
               />
             );
           })}
 
           {/* ABS Académie extra card */}
-          <ServiceCard
+          {/* <ServiceCard
             icon={GraduationCap}
             title="ABS Académie"
             description="Formations certifiantes en Prompt Engineering et branding IA. Développez les compétences qui façonnent l'avenir du leadership numérique."
             href="/academie"
-            ctaLabel="Voir les formations →"
-            className="md:col-span-2 lg:col-span-1"
-          />
+            ctaLabel="Voir les formations"
+            className="col-span-1 md:col-span-1 lg:col-span-1"
+          /> */}
         </div>
+        <ServiceCard
+          icon={GraduationCap}
+          title="ABS Académie"
+          description="Formations certifiantes en Prompt Engineering et branding IA. Développez les compétences qui façonnent l'avenir du leadership numérique."
+          href="/academie"
+          ctaLabel="Voir les formations"
+          className="col-span-1 md:col-span-1 lg:col-span-1"
+        />
       </div>
     </section>
   );
