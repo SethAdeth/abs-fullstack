@@ -1,3 +1,5 @@
+
+
 export const SITE_CONFIG = {
   name: "ABS Corporation™",
   fullName: "Avatar Branding System Corporation",
@@ -16,6 +18,8 @@ export const SITE_CONFIG = {
     facebook: "#",
   },
 };
+
+
 
 export const NAV_LINKS = [
   { label: "Accueil", href: "/" },
@@ -86,6 +90,7 @@ export const SERVICES = [
     hasFollowUp: false,
   },
 ];
+
 
 export const WORKFLOW_STEPS = [
   { step: 1, title: "Extraction ADN Oratoire", description: "Séance d'immersion totale : 6 min de données visuelles 4K pour la cartographie faciale + 2h de captation audio HD. Chaque nuance et intonation encodée." },
